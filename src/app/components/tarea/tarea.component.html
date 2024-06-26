@@ -1,11 +1,14 @@
 <mat-card class="card-tarea" appearance="outlined">
   <mat-card-header>
-    <mat-card-title>{{tarea.titulo}}</mat-card-title>
+    <mat-card-title>{{tarea.titulo}} {{tarea.id}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>{{tarea.id}}</p>
-    <p>{{tarea.fecha | date: 'dd/MM/yyyy'}}</p>
-    <p>{{tarea.prioridad}}</p>
+    <p> Fecha:{{tarea.fecha| date: 'dd/MM/yyyy'}}</p>
+    <p></p>
+    <p *ngIf="tarea.prioridad==1">Nivel de prioridad:{{tarea.prioridad}} (verde)</p>
+    <p *ngIf="tarea.prioridad==2">Nivel de prioridad:{{tarea.prioridad}} (naranja)</p>
+    <p *ngIf="tarea.prioridad==3">Nivel de prioridad:{{tarea.prioridad}} (rojo)</p>
+
   </mat-card-content>
   <mat-card-footer class="example-card-footer">
     <mat-chip-set aria-label="Chihuahua traits">

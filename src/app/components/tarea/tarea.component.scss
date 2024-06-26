@@ -1,6 +1,7 @@
 .card-tarea{
     align-items: center;
     align-content: center;
+    margin-bottom: 10%;
 }
 .check-icon-green {
     color: green;
@@ -8,5 +9,9 @@
   
   .check-icon-default {
     color: inherit; 
+  }
+mat-chip.detalles{
+    background-color: #2C3E50;
+    color: white;
   }
   
