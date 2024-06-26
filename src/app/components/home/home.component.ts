@@ -21,5 +21,18 @@ export class HomeComponent implements OnInit {
     this.tareas = this.tareaService.getTareas();
   }
 
+  fechaActual(fecha: Date) {
+    const hoy=new Date();
+    const inicio_semana=new Date(hoy.setDate(hoy.getDate()-hoy.getDay()+1));
+    const final_semana= new Date(hoy.setDate(hoy.getDate()-hoy.getDay()+7));
+
+    hoy.setDate(hoy.getDate()-(hoy.getDay()===0?6:hoy.getDay()-1));
+
+    const fecha_tarea= new Date(fecha);
+
+    return fecha_tarea >=inicio_semana && fecha_tarea <=final_semana;
+    
+  }
+
 
 }

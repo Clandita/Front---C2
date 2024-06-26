@@ -82,8 +82,56 @@ export class TareaService {
     {
       id: 10,
       titulo: "Planificación de eventos corporativos",
-      fecha: new Date(2024, 6, 3),
+      fecha: new Date(2024, 5, 30),
       descripcion: "Planificar los próximos eventos corporativos para el segundo semestre.",
+      prioridad: 2,
+      realizada: false
+    },
+    {
+      id: 11,
+      titulo: "Actualización de políticas de recursos humanos",
+      fecha: new Date(2024, 6, 1),
+      descripcion: "Revisar y actualizar las políticas de recursos humanos de la empresa.",
+      prioridad: 2,
+      realizada: false
+    },
+    {
+      id: 12,
+      titulo: "Revisión de contratos de proveedores",
+      fecha: new Date(2024, 6, 2),
+      descripcion: "Revisar y renegociar contratos con proveedores estratégicos.",
+      prioridad: 3,
+      realizada: false
+    },
+    {
+      id: 13,
+      titulo: "Desarrollo de campaña de marketing",
+      fecha: new Date(2024, 6, 3),
+      descripcion: "Planificar y desarrollar la nueva campaña de marketing para el tercer trimestre.",
+      prioridad: 1,
+      realizada: false
+    },
+    {
+      id: 14,
+      titulo: "Análisis de datos de ventas",
+      fecha: new Date(2024, 6, 4),
+      descripcion: "Analizar los datos de ventas del último trimestre y preparar un informe.",
+      prioridad: 3,
+      realizada: false
+    },
+    {
+      id: 15,
+      titulo: "Capacitación en seguridad informática",
+      fecha: new Date(2024, 6, 5),
+      descripcion: "Participar en la capacitación sobre las mejores prácticas de seguridad informática.",
+      prioridad: 2,
+      realizada: false
+    },
+    {
+      id: 16,
+      titulo: "Planificación de evento corporativo",
+      fecha: new Date(2024, 6, 6),
+      descripcion: "Organizar y coordinar el evento corporativo anual.",
       prioridad: 2,
       realizada: false
     }
@@ -94,6 +142,7 @@ export class TareaService {
     public getTareas():Tarea[]{
       return this.myTareas
     }
+  
   
   
 }
