@@ -1,14 +1,13 @@
 <mat-card class="card-tarea" appearance="outlined">
   <mat-card-header>
-    <mat-card-title>{{tarea.titulo}} {{tarea.id}}</mat-card-title>
+    <mat-card-title>{{ tarea.titulo }} {{ tarea.id }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p> Fecha:{{tarea.fecha| date: 'dd/MM/yyyy'}}</p>
-    <p></p>
-    <p *ngIf="tarea.prioridad==1">Nivel de prioridad:{{tarea.prioridad}} (verde)</p>
-    <p *ngIf="tarea.prioridad==2">Nivel de prioridad:{{tarea.prioridad}} (naranja)</p>
-    <p *ngIf="tarea.prioridad==3">Nivel de prioridad:{{tarea.prioridad}} (rojo)</p>
+    <p> Fecha: {{ tarea.fecha | date: 'dd/MM/yyyy' }}</p>
 
+    <p *ngIf="tarea.prioridad==1">Nivel de prioridad: <mat-icon style="color: green;">circle</mat-icon></p>
+    <p *ngIf="tarea.prioridad==2">Nivel de prioridad: <mat-icon style="color: orange;">circle</mat-icon></p>
+    <p *ngIf="tarea.prioridad==3">Nivel de prioridad: <mat-icon style="color: red;">circle</mat-icon></p>
   </mat-card-content>
   <mat-card-footer class="example-card-footer">
     <mat-chip-set aria-label="Chihuahua traits">
@@ -17,7 +16,7 @@
         <mat-icon>check_circle</mat-icon> Realizar
       </mat-chip>
       <mat-chip *ngIf="tarea.realizada" color="primary" (click)="marcarComoNoRealizada(tarea)">
-        <mat-icon class="check-icon-green" >check_circle</mat-icon> Realizada
+        <mat-icon class="check-icon-green">check_circle</mat-icon> Realizada
       </mat-chip>
     </mat-chip-set>
   </mat-card-footer>
