@@ -23,12 +23,13 @@ body{
 }
 .centered-card{
     width: 300px;
-    height: 250px;
+    height: 175px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    box-sizing: border-box;
 }
-.centered-card mat-card-content{
-    flex: 1;
-}
+
+
