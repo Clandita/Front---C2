@@ -142,7 +142,16 @@ export class TareaService {
     public getTareas():Tarea[]{
       return this.myTareas
     }
+    
+    public getTareasByDateRange(startDate: Date, endDate: Date): Tarea[] {
+      return this.myTareas.filter(tarea =>
+        tarea.fecha >= startDate && tarea.fecha <= endDate
+      );
+    }
   
+    getTareaById(tareaId: number ):Tarea {
+      return this.myTareas.find(item=>item.id===tareaId)!;
+    }
   
   
 }
