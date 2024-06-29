@@ -56,7 +56,9 @@ export class ListadoComponent implements OnInit {
     }
   }
 
-  filterTareasByTitle(searchTerm: string) {
+  filterTareasByTitle(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    const searchTerm = inputElement.value;
     this.filteredTareas = this.tareas.filter(tarea => {
       return tarea.titulo.toLowerCase().includes(searchTerm.toLowerCase());
     });
