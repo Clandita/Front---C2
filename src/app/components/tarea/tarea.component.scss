@@ -1,9 +1,18 @@
-.card-tarea{
-    align-items: center;
-    align-content: center;
-    margin-bottom: 10%;
-    position: relative;
-    padding-top: 20px;
+.card-tarea {
+  align-items: center;
+  align-content: center;
+  margin-bottom: 10%;
+  position: relative;
+  padding-top: 20px;
+
+  width: 300px;
+  height: 160px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .check-icon-green {
     color: green;
@@ -25,4 +34,8 @@ mat-chip.detalles{
 }
 .mat-card-title{
   padding-right: 40px;
+}
+mat-card-content {
+  flex: 1;
+  overflow: auto; /* Permite desplazamiento si el contenido es largo */
 }
