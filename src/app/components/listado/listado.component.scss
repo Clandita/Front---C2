@@ -7,3 +7,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.btn-custom {
+  background-color: #001f3f; /* Color azul marino */
+  color: white;
+  border-color: #001f3f;
+}
+
+.btn-custom:hover {
+  background-color: #003366; /* Color azul marino oscuro al hacer hover */
+  border-color: #003366;
+}
+
+.btn-custom:focus {
+  box-shadow: none; /* Elimina el shadow focus por defecto */
+}
+

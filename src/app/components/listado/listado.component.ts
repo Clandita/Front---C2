@@ -8,6 +8,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'listado',
   standalone: true,
@@ -58,12 +59,26 @@ export class ListadoComponent implements OnInit {
 
   filterTareasByTitle(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    const searchTerm = inputElement.value;
-    this.filteredTareas = this.tareas.filter(tarea => {
-      return tarea.titulo.toLowerCase().includes(searchTerm.toLowerCase());
-    });
+    const searchTerm = inputElement.value.toLowerCase();
+    const rangeValue = this.range.value;
+  
+    if (rangeValue && rangeValue.start && rangeValue.end) {
+      const { start, end } = rangeValue;
+      this.filteredTareas = this.tareas.filter(tarea => {
+        const tareaFecha = new Date(tarea.fecha);
+        return tareaFecha >= start && tareaFecha <= end &&
+          tarea.titulo.toLowerCase().includes(searchTerm);
+      });
+    } else {
+      this.filteredTareas = this.tareas.filter(tarea =>
+        tarea.titulo.toLowerCase().includes(searchTerm)
+      );
+    }
   }
-
+  
+  refreshPage() {
+    location.reload();
+  }
   trackByFn(index: any, item: any) {
     return item.id;
   }

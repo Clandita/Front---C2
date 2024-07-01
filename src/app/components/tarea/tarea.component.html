@@ -14,10 +14,10 @@
     <mat-chip-set aria-label="Chihuahua traits">
       <mat-chip [routerLink]="['/tareas',tarea.id]">Ver detalles</mat-chip>
       <mat-chip *ngIf="!tarea.realizada" color="primary" (click)="marcarComoRealizada(tarea)">
-        <mat-icon>check_circle</mat-icon>
+        <i class="fas fa-check-circle check-icon"></i>
       </mat-chip>
       <mat-chip *ngIf="tarea.realizada" color="primary" (click)="marcarComoNoRealizada(tarea)">
-        <mat-icon class="check-icon-green">check_circle</mat-icon>
+        <i class="fas fa-check-circle check-icon-green"></i>
       </mat-chip>
     </mat-chip-set>
   </mat-card-footer>
