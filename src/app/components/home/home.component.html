@@ -4,7 +4,7 @@
     @for (tarea of tareas; track $index){
         @if (!tarea.realizada){
         @if (fechaActual(tarea.fecha)){
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <card-tarea [tarea]=tarea></card-tarea>
     
             </div>

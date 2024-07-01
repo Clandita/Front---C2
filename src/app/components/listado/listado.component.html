@@ -4,8 +4,8 @@
       <h1>Listado de Tareas</h1>
     </div>
 
-    <div class="col-6 listado">
-      <div class="col-md-12 centered-card" *ngFor="let tarea of filteredTareas; trackBy: trackByFn">
+    <div class="col-md-6 listado">
+      <div class="col-md-12 mb-4 mt-4" *ngFor="let tarea of filteredTareas; trackBy: trackByFn">
         <card-tarea [tarea]="tarea"></card-tarea>
       </div>
       <div *ngIf="filteredTareas.length === 0" class="col-md-12 text-center">
